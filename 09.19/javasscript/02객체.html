@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href = "css/reset.css">
+</head>
+<body>
+  <!-- 객체란   (=object)
+              (좀 deep한 개념임...백엔드 이런데서는 많이 공부해야함...)-->
+  <!--  - 객체는 복합 자료형임. (여러개의 타입을 다 집어넣어서 변수를 만들 수 있음)
+        - (배열은 같은 계열의 값들만 할 수 있음) but 객체는 문자, 숫자, 함수까지 다 포함해서 변수를 만들 수 있음. -> 그래서 이름이 복합자료형임.
+        - (key)  (key값)
+        - 매서드(=함수), 블리언(=참,거짓)
+        - 객체는 { }임~  (배열의 []와 달리...)
+        - var hotel {
+               name : 'Quay';     ( key  : key값)
+        }
+
+        check : function() {
+        }
+
+
+        - hotel.name  ==> 'Quay'를 가져옴
+        - hotel.check();   ==> 함수를 가져옴
+
+        - 생성자 new  ==> 객체생성자  (ex: new Date)
+        - 내장객체  
+             : window객체, Document 객체, Date 객체, Number객체  (ex- document.write등...)
+
+   -->
+   
+
+   <script>
+    const student = {           //객체 변수
+      name : 'LEE',
+      kor : 90,
+      eng : 100,
+      mat : 85
+    };
+    
+    document.write("이름 : "+student.name+"<br>");     //==> student변수에서 name이라는 key의 key값을 가져옴
+    document.write("국어 : "+student.kor+"<br>");      //==> student변수에서 kor의 key값을 가져옴
+    document.write("영어 : "+student.eng+"<br>");
+    document.write("수학 : "+student.mat+"<br>");
+    const tot=(student.kor + student.eng + student.mat);
+    const ave =tot/3;
+    document.write("총점 : "+tot+"<br>");
+    document.write("평균: "+ave.toFixed(1)+"<br>");
+             //toFixed(1) ---> 반올림하여 소수 첫째점 까지만 찍어라
+   </script>
+</body>
+</html>

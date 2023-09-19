@@ -1,0 +1,12 @@
+.fs {
+  &-small {               //$는 부모..를 말함 (.fs)
+    font-size:12px;
+  }
+
+  &-medium{
+    font-size:14px;
+  }
+  &-large {
+    font-size:16px;
+  }
+}

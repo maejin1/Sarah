@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>hotel availability</h2>
+  <div id="hotelName"></div>
+  <div id="availability">
+    <p id="rooms"></p>
+    <p>rooms left</p>
+  </div>
+
+  <script>
+    const hotel = {
+      name : 'Quay',
+      rooms : 40,
+      booked : 25,
+      checkAvailability : function(){
+        return this.rooms - this.booked;
+      }
+    };
+
+    const elName = document.getElementById('hotelName');
+    elName.innerHTML = hotel.name;
+    const elRooms = document.getElementById('rooms');
+    elRooms.innerHTML = hotel.checkAvailability();
+  </script>
+</body>
+</html>
